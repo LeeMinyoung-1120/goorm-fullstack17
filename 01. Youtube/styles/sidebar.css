@@ -1,0 +1,117 @@
+/* 공통 사이드바 */
+.sidebar {
+  background: #fff;
+  position: sticky;
+  top: 56px;
+  height: calc(100vh - 56px);
+  overflow: auto;
+}
+.sidebar .inner {
+  padding: 12px;
+}
+.nav-group {
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 6px;
+  margin-bottom: 6px;
+}
+.nav-group.no-border {
+  border-bottom: 0;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.nav-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  color: #0f0f0f;
+}
+.nav-btn:hover {
+  background: #f7f7f7;
+}
+.nav-btn.active {
+  background: #f7f7f7;
+  color: #000000;
+}
+.nav-btn.active .material-symbols-outlined {
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+.label {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.nav-icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* 내 페이지, 탐색 그룹 헤더 */
+.group-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 10px;
+  border-radius: 10px;
+  margin: 12px 0 6px;
+}
+.group-header:hover {
+  background: #f7f7f7;
+}
+.group-header .title {
+  font-size: 14px;
+  color: #0f0f0f;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* 데스크탑 사이드바 */
+.desktop-sidebar {
+  display: block;
+  width: 240px;
+}
+
+/* 아이패드 사이드바 */
+.tablet-sidebar {
+  display: none;
+  width: 90px;
+}
+.tablet-sidebar .nav-btn {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  padding: 14px 0;
+  font-size: 10px;
+  border-radius: 12px;
+}
+.tablet-sidebar .material-symbols-outlined,
+.tablet-sidebar .nav-icon {
+  font-size: 24px;
+  width: 24px;
+  height: 24px;
+}
+
+/* 반응형 적용 */
+/* 아이패드 구간: 데스크탑 숨기고 태블릿 표시 */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .desktop-sidebar {
+    display: none;
+  }
+  .tablet-sidebar {
+    display: block;
+  }
+}
+/* 모바일: 사이드바 완전 숨김 + 보더 제거 */
+@media (max-width: 767px) {
+  .sidebar,
+  .desktop-sidebar,
+  .tablet-sidebar {
+    display: none !important;
+    border: 0 !important;
+  }
+}

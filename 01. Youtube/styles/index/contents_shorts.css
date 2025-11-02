@@ -1,0 +1,145 @@
+
+/* Shorts 헤더 */
+.shorts-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.shorts-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.shorts-title {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 28px;
+    color: #0f0f0f;
+}
+
+/* Shorts 그리드 레이아웃 */
+/* 한 줄로 배치하고 좌우 스크롤 */
+.shorts-grid {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    padding-bottom: 12px;
+}
+
+/* 스크롤바 스타일 */
+.shorts-grid::-webkit-scrollbar {
+    height: 8px;
+}
+
+.shorts-grid::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.shorts-grid::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.shorts-grid::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* 반응형 적용 */
+@media (max-width: 1096px) {
+    main {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 500px) {
+    .shorts-title {
+        font-size: 18px;
+    }
+
+    .shorts-grid {
+        gap: 12px;
+    }
+}
+
+/* 개별 Shorts 카드 영역 */
+.shorts-card {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    width: 200px;
+}
+
+/* 반응형 카드 크기 */
+@media (max-width: 500px) {
+    .shorts-card {
+        width: 160px;
+    }
+}
+
+/* 썸네일 영역 */
+.shorts-thumbnail-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 177.78%; /* 9:16 비율 (Shorts는 세로형) */
+    background-color: #272727;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+/* 썸네일 이미지 영역 */
+.shorts-thumbnail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 썸네일 호버 효과 */
+.shorts-thumbnail:hover {
+    transform: scale(1.02);
+    transition: transform 0.2s ease;
+}
+
+/* 조회수 표시 */
+.shorts-views {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Shorts 정보 영역 */
+.shorts-info {
+    padding: 0 4px;
+}
+
+/* Shorts 제목 */
+.shorts-video-title {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #0f0f0f;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+/* Shorts 제목 호버 */
+.shorts-video-title:hover {
+    color: #606060;
+}

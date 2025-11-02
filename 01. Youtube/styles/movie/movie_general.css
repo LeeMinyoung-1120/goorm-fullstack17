@@ -1,0 +1,42 @@
+/* Main container */
+.main-container {
+  display: flex;
+  margin-top: 56px;
+}
+
+/* Primary */
+.primary {
+  /* width: 938px; */
+  padding :0 1vw;
+  flex: 1;
+  max-width: 1100px;
+  width: 100%;
+}
+
+/* Up next */
+.secondary {
+  width: 426px;
+  flex-shrink: 0;
+}
+
+/* 대형 태블릿 */
+@media (min-width: 1000px) and (max-width: 1024px) {
+  .primary {
+    max-width: 70%;
+  }
+}
+
+/* 모바일 */
+@media (max-width: 999px) {
+  .main-container {
+    flex-direction: column;
+    margin-top: 0px;
+  }
+  .primary {
+    padding: 0;
+    width: 100%;
+  }
+  .secondary {
+    width: 100%;
+  }
+}

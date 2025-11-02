@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>YouTube Clone - Movie Sample</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+
+    <!-- video overay icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="../styles/general.css" />
+    <link rel="stylesheet" href="../styles/header.css" />
+    <link rel="stylesheet" href="../styles/movie/movie_general.css" />
+    <link rel="stylesheet" href="../styles/movie/video.css" />
+    <link rel="stylesheet" href="../styles/movie/recommend.css" />
+    <link rel="stylesheet" href="../styles/movie/detail.css" />
+    <link rel="stylesheet" href="../styles/movie/comment.css" />
+
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="left">
+        <button class="icon-btn">
+          <span class="material-symbols-outlined">menu</span>
+        </button>
+
+        <a href="../index.html" class="logo">
+          <img
+            class="logo-img"
+            src="../assets/icons/YouTube-Logo.wine.svg"
+            alt="YouTube 로고"
+          />
+          <span class="logo-kr">KR</span>
+        </a>
+      </div>
+
+      <div class="center" role="search">
+        <form class="search-form" onsubmit="return false">
+          <span class="material-symbols-outlined search-icon">search</span>
+
+          <input type="search" placeholder="검색" />
+
+          <button class="material-symbols-outlined ime-keyboard">
+            keyboard
+          </button>
+
+          <button class="search-btn with-tip" data-tip="검색">
+            <span class="material-symbols-outlined">search</span>
+          </button>
+        </form>
+
+        <button class="voice-btn icon-btn with-tip" data-tip="음성으로 검색">
+          <img class="voice-btn" src="../assets/icons/mic_fill.svg" alt="" />
+        </button>
+      </div>
+
+      <div class="mobile-actions">
+        <button class="icon-btn with-tip" data-tip="검색">
+          <span class="material-symbols-outlined">search</span>
+        </button>
+
+        <button class="create-btn">
+          <span class="material-symbols-outlined">add</span>
+          <span class="btn-text">만들기</span>
+        </button>
+
+        <div class="avatar">Y</div>
+      </div>
+
+      <div class="right">
+        <button class="create-btn">
+          <span class="material-symbols-outlined">add</span>
+          <span class="btn-text">만들기</span>
+        </button>
+        <button class="icon-btn with-tip" data-tip="알림">
+          <span class="material-symbols-outlined">notifications</span>
+        </button>
+        <div class="avatar">Y</div>
+      </div>
+    </header>
+    <!-- Main container -->
+    <div class="main-container">
+      <!-- Left: Primary=Player + Meta + Comments -->
+      <main class="primary">
+        <!-- Player -->
+        <div class="player" id="videoPlayer">
+          <iframe src="https://www.youtube.com/embed/AK3lsBwcFSI?si=fkltU9gITLPXpfMU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <!-- settings-menu -->
+          <div class="settings-menu" id="settingsMenu"></div>
+        </div>
+
+        <!-- Meta -->
+        <section class="detail-grid">
+          <div id="title">
+            <h2 class="video_title">Minimal House Vinyl mix in a tiny apartment in Japan Vol.5 - by Itou</h2>
+          </div>
+          <div class="uploader-container">
+            <div class="uploader_info">
+              <div class="avatar_picture">
+                <img class="avatar" src="../assets/icons/channels_zahhousemix.jpg" />
+              </div>
+              <div class="uploader-info">
+                <p class="uploader_name">zah house mix</p>
+                <p class="uploader_follwer">구독자 5.78천명</p>
+              </div>
+              <div class="follow-button">
+                <button class="follow">구독</button>
+              </div>
+            </div>
+            <div class="button_list">
+              <div class="split-button">
+                <button class="like"><img style="margin-right: 10px;" src="../assets/icons/like.png"></button>
+                <button class="hate"><img src="../assets/icons/hate.png"></button>
+              </div>
+              <div class="others">
+                <button class="share"><img style="float: left; margin-right: 5px;" src="../assets/icons/share.png"><span>공유</span></button>
+                <button class="save"><img style="float: left; margin-right: 5px;" src="../assets/icons/download.png"><span>오프라인 저장</span></button>
+                <button class="thanks"><img style="float: left; margin-right: 5px;" src="../assets/icons/thanks.png"><span>Thanks</span></button>
+                <button class="more"><span>···</span></button>
+              </div>
+            </div>
+          </div>
+          <div class="descriptions">
+                    <span class="movie_info">조회수 86,357회  2025. 8. 30. </span>
+                    <div class="description">
+                    <p>A Japanese creative collective team “zah” releases ethereal mix series performed by our members and local DJs in our community to undiscover their profound talent to the world from our tiny 10㎡ apartment workspace in Tokyo.</p>
+                    <br>
+                    <p>Check out our website for our direction, 3D graphic designs and music/video production portfolios if you feel related to our tastes. Inquiries welcomed from all over the world.</p>
+                    <br>
+                    <p>Special Thanks and Happy Wedding Tomo-san!</p>
+                    </div>
+                    <br>
+                    <span>간략히</span>
+                    <br>
+                </div>
+        </section>
+
+        <!-- Comments -->
+        <section class="comment-grid">
+            <div class="comment-header">
+                <h3 class="comment_title">댓글 0개</h3>
+                <button class="sorting"><img style="float: left; margin-right: 5px;" src="../assets/icons/sort.png"><span>정렬 기준</span>
+                </button>
+            </div>
+            <div class="my_comment">
+                <div class="my_avatar_and_comment">
+                    <img class="avatar" src="../assets/avartars/avatar-1.png" />
+                    <input type="textbox" id="comment_input" class="comment_input" placeholder="댓글 추가...">
+                </div>
+                <div id="commentBtnList" class="comment_buttons">
+                    <button id="cancel" class="cancel">취소</button>
+                    <button id="apply" class="apply">댓글</button>
+                </div>
+            </div>
+            <div class="commentList" id="commentList">
+            </div>
+        </section>
+      </main>
+
+      <!-- Right: Up next -->
+      <aside class="secondary">
+        <div class="sidebar">
+          <div class="list">
+            <h3 class="upnext">관련 콘텐츠</h3>
+            <section class="recommend-video">
+      <div class="recommend-video-preview">
+
+        <div class="recommend-video-thumbnails-row">
+          <a href="movie01.html">
+            <img class="thumbnail" src="../assets/images/thumbnail_ode.jpg" alt="추천영상사진">
+          </a>
+          <div class="video-time">
+            39:23
+          </div>
+        </div>
+
+        <div class="recommend-video-info">
+          <p class="recommend-video-title">
+            | playlist | 평일 오후, 여유로운 부암동 산책
+          </p>
+          <p class="recommend-video-uploader">
+            Ode Studio Seoul
+          </p>
+          <p class="recommend-video-stats">
+              조회수 2.4만회 &#183; 2주 전
+          </p>
+        </div>
+      </div>
+
+      <div class="recommend-video-preview">
+
+        <div class="recommend-video-thumbnails-row">
+          <a href="movie02.html">
+            <img class="thumbnail" src="../assets/images/thumbnail_softhour.jpg" alt="추천영상사진">
+          </a>
+          <div class="video-time">
+            2:02:08
+          </div>
+        </div>
+
+        <div class="recommend-video-info">
+          <p class="recommend-video-title">
+            열악한 환경은 변명이 되지 않는다.
+          </p>
+          <p class="recommend-video-uploader">
+            soft hour
+          </p>
+          <p class="recommend-video-stats">
+              조회수 4만회 &#183; 2개월 전
+          </p>
+        </div>
+      </div>
+
+      <div class="recommend-video-preview">
+
+        <div class="recommend-video-thumbnails-row">
+          <a href="movie03.html">
+            <img class="thumbnail" src="../assets/images/thumbnail_SMTO.jpg" alt="추천영상사진">
+          </a>
+          <div class="video-time">
+            43:42
+          </div>
+        </div>
+
+        <div class="recommend-video-info">
+          <p class="recommend-video-title">         
+            [playlist] 국락 갈래말래갈래말래
+          </p>
+          <p class="recommend-video-uploader">
+            서울시국악관현악단
+          </p>
+          <p class="recommend-video-stats">
+              조회수 1.5만회 &#183; 1개월 전
+          </p>
+        </div>
+      </div>
+
+      <div class="recommend-video-preview">
+
+        <div class="recommend-video-thumbnails-row">
+          <a href="movie04.html">
+            <img class="thumbnail" src="../assets/images/thumbnail_roomwaves.jpg" alt="추천영상사진">
+          </a>
+          <div class="video-time">
+            1:28:10
+          </div>
+        </div>
+
+        <div class="recommend-video-info">
+          <p class="recommend-video-title">         
+            I can fly.
+          </p>
+          <p class="recommend-video-uploader">
+            room waves
+          </p>
+          <p class="recommend-video-stats">
+              조회수 9.7천회 &#183; 2주 전
+          </p>
+        </div>
+      </div>
+
+      <div class="recommend-video-preview">
+
+        <div class="recommend-video-thumbnails-row">
+          <a href="movie05.html">
+            <img class="thumbnail" src="../assets/images/thumbnail_hostless.jpg" alt="추천영상사진">
+          </a>
+          <div class="video-time">
+            39:53
+          </div>
+        </div>
+
+        <div class="recommend-video-info">
+          <p class="recommend-video-title">
+            사랑에 시차가 있다니 | playlist
+          </p>
+          <p class="recommend-video-uploader">
+            hostless
+          </p>
+          <p class="recommend-video-stats">
+              조회수 5.7만회 &#183; 2주 전
+          </p>
+        </div>
+      </div>
+
+      <div class="recommend-video-preview">
+
+        <div class="recommend-video-thumbnails-row">
+          <a href="">
+            <img class="thumbnail" src="../assets/recommend-thumnails/thumbnail-1.jpg" alt="추천영상사진">
+          </a>
+          <div class="video-time">
+            5:00:00
+          </div>
+        </div>
+
+        <div class="recommend-video-info">
+          <p class="recommend-video-title">
+            [모동숲 ASMR] 50/10 뽀모도로 | 비오는 날 학교 도서관 백색소음...
+          </p>
+          <p class="recommend-video-uploader">
+            코코 / Coco
+          </p>
+          <p class="recommend-video-stats">
+              조회수 7.9만회 &#183; 3개월 전
+          </p>
+        </div>
+      </div>
+
+      <div class="recommend-video-preview">
+
+        <div class="recommend-video-thumbnails-row">
+          <a href="">
+            <img class="thumbnail" src="../assets/recommend-thumnails/thumbnail-2.jpg" alt="추천영상사진">
+          </a>
+          <div class="video-time">
+            18:30
+          </div>
+        </div>
+
+        <div class="recommend-video-info">
+          <p class="recommend-video-title">
+            뽀야미가 말아주는 쇠맛 플리
+          </p>
+          <p class="recommend-video-uploader">
+            Hajang
+          </p>
+          <p class="recommend-video-stats">
+              조회수 32만회 &#183; 3년 전
+          </p>
+        </div>
+      </div>
+
+      <div class="recommend-video-preview">
+
+        <div class="recommend-video-thumbnails-row">
+          <a href="">
+            <img class="thumbnail" src="../assets/recommend-thumnails/thumbnail-3.jpg" alt="추천영상사진">
+          </a>
+          <div class="video-time">
+            8:20
+          </div>
+        </div>
+
+        <div class="recommend-video-info">
+          <p class="recommend-video-title">         
+            ACNH • Study with me 🌃 keyboard typing & writing...
+          </p>
+          <p class="recommend-video-uploader">
+            코코 / Coco
+          </p>
+          <p class="recommend-video-stats">
+              조회수 3.7천회 &#183; 9개월 전
+          </p>
+        </div>
+      </div>
+
+      <div class="recommend-video-preview">
+
+        <div class="recommend-video-thumbnails-row">
+          <a href="">
+            <img class="thumbnail" src="../assets/recommend-thumnails/thumbnail-4.jpg" alt="추천영상사진">
+          </a>
+          <div class="video-time">
+            1:00:00
+          </div>
+        </div>
+
+        <div class="recommend-video-info">
+          <p class="recommend-video-title">
+            [모동숲 ASMR] 이른 아침, 뽀야미와 조용한 독서 1시간 📖
+          </p>
+          <p class="recommend-video-uploader">
+            코코 / Coco
+          </p>
+          <p class="recommend-video-stats">
+              조회수 500회 &#183; 9일 전
+          </p>
+        </div>
+      </div>
+    </section>
+          </div>
+        </div>
+      </aside>
+      <!-- Mobile Comments -->
+      <section class="mobile-comment-grid">
+        <div class="comment-header">
+          <h3 class="comment_title">댓글 0개</h3>
+                <button class="sorting"><img style="float: left; margin-right: 5px;" src="../assets/icons/sort.png"><span>정렬 기준</span>
+                </button>
+            </div>
+            <div class="my_comment">
+                <div class="my_avatar_and_comment">
+                    <img class="avatar" src="../assets/avartars/avatar-1.png" />
+                    <input type="textbox" id="comment_input" class="comment_input" placeholder="댓글 추가...">
+                </div>
+                <div id="commentBtnList" class="comment_buttons">
+                    <button id="cancel" class="cancel">취소</button>
+                    <button id="apply" class="apply">댓글</button>
+                </div>
+            </div>
+            <div class="commentList" id="commentList">
+            </div>
+        </section>
+    </div>
+    <script src="../script/script.js"></script>
+  </body>
+</html>

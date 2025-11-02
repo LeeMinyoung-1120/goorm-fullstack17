@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>YouTube Clone - Main</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles/general.css" />
+    <link rel="stylesheet" href="styles/header.css" />
+    <link rel="stylesheet" href="styles/sidebar.css" />
+    <link rel="stylesheet" href="styles/index/contents_video.css" />
+    <link rel="stylesheet" href="styles/index/contents_shorts.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="left">
+        <button class="icon-btn">
+          <span class="material-symbols-outlined">menu</span>
+        </button>
+
+        <a href="#" class="logo">
+          <img
+            class="logo-img"
+            src="assets/icons/YouTube-Logo.wine.svg"
+            alt="YouTube 로고"
+          />
+          <span class="logo-kr">KR</span>
+        </a>
+      </div>
+
+      <div class="center" role="search">
+        <form class="search-form" onsubmit="return false">
+          <span class="material-symbols-outlined search-icon">search</span>
+
+          <input type="search" placeholder="검색" />
+
+          <button class="material-symbols-outlined ime-keyboard">
+            keyboard
+          </button>
+
+          <button class="search-btn with-tip" data-tip="검색">
+            <span class="material-symbols-outlined">search</span>
+          </button>
+        </form>
+
+        <button class="voice-btn icon-btn with-tip" data-tip="음성으로 검색">
+          <img class="voice-btn" src="assets/icons/mic_fill.svg" alt="" />
+        </button>
+      </div>
+
+      <div class="mobile-actions">
+        <button class="icon-btn with-tip" data-tip="검색">
+          <span class="material-symbols-outlined">search</span>
+        </button>
+
+        <button class="create-btn">
+          <span class="material-symbols-outlined">add</span>
+          <span class="btn-text">만들기</span>
+        </button>
+
+        <div class="avatar">Y</div>
+      </div>
+
+      <div class="right">
+        <button class="create-btn">
+          <span class="material-symbols-outlined">add</span>
+          <span class="btn-text">만들기</span>
+        </button>
+        <button class="icon-btn with-tip" data-tip="알림">
+          <span class="material-symbols-outlined">notifications</span>
+        </button>
+        <div class="avatar">Y</div>
+      </div>
+    </header>
+
+    <div class="shell">
+      <aside class="sidebar desktop-sidebar">
+        <div class="inner">
+          <nav class="nav-group">
+            <button class="nav-btn active">
+              <img class="nav-icon" src="assets/icons/home_fill.svg" alt="" />
+              <span class="label">홈</span>
+            </button>
+            <button class="nav-btn">
+              <img class="nav-icon" src="assets/icons/shorts-01.png" alt="" />
+              <span class="label">Shorts</span>
+            </button>
+            <button class="nav-btn">
+              <span class="material-symbols-outlined">subscriptions</span
+              ><span class="label">구독</span>
+            </button>
+          </nav>
+
+          <div class="group-header">
+            <h2 class="title">내 페이지</h2>
+            <span class="material-symbols-outlined">chevron_right</span>
+          </div>
+          <nav class="nav-group">
+            <button class="nav-btn">
+              <span class="material-symbols-outlined">history</span
+              ><span class="label">기록</span>
+            </button>
+            <button class="nav-btn">
+              <span class="material-symbols-outlined">playlist_play</span
+              ><span class="label">재생목록</span>
+            </button>
+            <button class="nav-btn">
+              <span class="material-symbols-outlined">smart_display</span
+              ><span class="label">내 동영상</span>
+            </button>
+            <button class="nav-btn">
+              <span class="material-symbols-outlined">school</span
+              ><span class="label">내 학습 프로그램</span>
+            </button>
+            <button class="nav-btn">
+              <span class="material-symbols-outlined">schedule</span
+              ><span class="label">나중에 볼 동영상</span>
+            </button>
+            <button class="nav-btn">
+              <span class="material-symbols-outlined">thumb_up</span
+              ><span class="label">좋아요 표시한 동영상</span>
+            </button>
+          </nav>
+
+          <div class="group-header">
+            <h2 class="title">탐색</h2>
+          </div>
+          <nav class="nav-group no-border">
+            <button class="nav-btn">
+              <span class="material-symbols-outlined">local_mall</span
+              ><span class="label">쇼핑</span>
+            </button>
+            <button class="nav-btn">
+              <span class="material-symbols-outlined">music_note</span
+              ><span class="label">음악</span>
+            </button>
+            <button class="nav-btn">
+              <span class="material-symbols-outlined">movie</span
+              ><span class="label">영화</span>
+            </button>
+            <button class="nav-btn">
+              <span class="material-symbols-outlined">sensors</span
+              ><span class="label">라이브</span>
+            </button>
+            <button class="nav-btn">
+              <span class="material-symbols-outlined">sports_esports</span
+              ><span class="label">게임</span>
+            </button>
+
+            <button class="nav-btn">
+              <span class="material-symbols-outlined">sports_soccer</span
+              ><span class="label">스포츠</span>
+            </button>
+            <button class="nav-btn">
+              <span class="material-symbols-outlined">school</span
+              ><span class="label">학습 프로그램</span>
+            </button>
+            <button class="nav-btn">
+              <span class="material-symbols-outlined">podcasts</span
+              ><span class="label">팟캐스트</span>
+            </button>
+          </nav>
+        </div>
+      </aside>
+
+      <aside class="sidebar tablet-sidebar">
+        <div class="inner">
+          <nav class="nav-group no-border">
+            <button class="nav-btn active" data-tip="홈">
+              <img class="nav-icon" src="assets/icons/home_fill.svg" alt="" />
+              <span class="label">홈</span>
+            </button>
+            <button class="nav-btn" data-tip="Shorts">
+              <img
+                class="nav-icon"
+                src="assets/icons/shorts-01.png"
+                alt=""
+              /><span class="label">Shorts</span>
+            </button>
+            <button class="nav-btn" data-tip="구독">
+              <span class="material-symbols-outlined">subscriptions</span
+              ><span class="label">구독</span>
+            </button>
+            <button class="nav-btn" data-tip="내 페이지">
+              <span class="material-symbols-outlined">account_circle</span
+              ><span class="label">내 페이지</span>
+            </button>
+          </nav>
+        </div>
+      </aside>
+
+      <main class="content">
+        <section class="video-grid">
+          <!-- 영상 카드 1 -->
+          <div class="video-card" OnClick="location.href ='movie_list/movie01.html'">
+            <div class="thumbnail-container">
+              <img
+                class="thumbnail"
+                src="assets/images/thumbnail_ode.jpg"
+                alt="Thumbnail"
+              />
+              <span class="video-duration">39:24</span>
+            </div>
+            <div class="video-info">
+              <div class="channel-icon">
+                <img src="assets/icons/channels_ode.jpg" alt="Channel Icon" />
+              </div>
+              <div class="video-details">
+                <h3 class="video-title">
+                  | playlist | 평일 오후, 여유로운 부암동 산책
+                </h3>
+                <p class="channel-name">Ode Studio Seoul</p>
+                <p class="video-metadata">조회수 1.2만회 · 3일 전</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 영상 카드 2 -->
+          <div class="video-card" OnClick="location.href ='movie_list/movie02.html'">
+            <div class="thumbnail-container">
+              <img
+                class="thumbnail"
+                src="assets/images/thumbnail_softhour.jpg"
+                alt="Thumbnail"
+              />
+              <span class="video-duration">2:02:08</span>
+            </div>
+            <div class="video-info">
+              <div class="channel-icon">
+                <img
+                  src="assets/icons/channels_softhour.jpg"
+                  alt="Channel Icon"
+                />
+              </div>
+              <div class="video-details">
+                <h3 class="video-title">
+                  열악한 환경은 변명이 되지 않는다.
+                </h3>
+                <p class="channel-name">soft hour</p>
+                <p class="video-metadata">조회수 5.8만회 · 1주일 전</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 영상 카드 3 -->
+          <div class="video-card">
+            <div class="thumbnail-container">
+              <img
+                class="thumbnail"
+                src="assets/images/thumbnail_35playlisyt.jpg"
+                alt="Thumbnail"
+              />
+              <span class="video-duration">38:03</span>
+            </div>
+            <div class="video-info">
+              <div class="channel-icon">
+                <img
+                  src="assets/icons/channels_35playlisyt.jpg"
+                  alt="Channel Icon"
+                />
+              </div>
+              <div class="video-details">
+                <h3 class="video-title">연휴 마지막 날에 듣는 R&B 플리</h3>
+                <p class="channel-name">35 playlisyt</p>
+                <p class="video-metadata">조회수 3.2만회 · 2일 전</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 영상 카드 4 -->
+          <div class="video-card">
+            <div class="thumbnail-container">
+              <img
+                class="thumbnail"
+                src="assets/images/thumbnail_jazzeditor.jpg"
+                alt="Thumbnail"
+              />
+              <span class="video-duration">1:01:15</span>
+            </div>
+            <div class="video-info">
+              <div class="channel-icon">
+                <img
+                  src="assets/icons/channels_jazzeditor.jpg"
+                  alt="Channel Icon"
+                />
+              </div>
+              <div class="video-details">
+                <h3 class="video-title">
+                  [Playlist] 영화 '그린 북' 너머의 음악 | 돈 셜리의 실제 연주
+                </h3>
+                <p class="channel-name">재즈기자 Jazz Editor</p>
+                <p class="video-metadata">조회수 12만회 · 2주일 전</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 영상 카드 5 -->
+          <div class="video-card">
+            <div class="thumbnail-container">
+              <img
+                class="thumbnail"
+                src="assets/images/thumbnail_yara.jpg"
+                alt="Thumbnail"
+              />
+              <span class="video-duration">30:07</span>
+            </div>
+            <div class="video-info">
+              <div class="channel-icon">
+                <img src="assets/icons/channels_yara.jpg" alt="Channel Icon" />
+              </div>
+              <div class="video-details">
+                <h3 class="video-title">
+                  [Movie] Fantastic Mr.Fox OST + My Drawing
+                </h3>
+                <p class="channel-name">yara</p>
+                <p class="video-metadata">조회수 8.5만회 · 5일 전</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 영상 카드 6 -->
+          <div class="video-card" OnClick="location.href ='movie_list/movie03.html'">
+            <div class="thumbnail-container">
+              <img
+                class="thumbnail"
+                src="assets/images/thumbnail_SMTO.jpg"
+                alt="Thumbnail"
+              />
+              <span class="video-duration">43:42</span>
+            </div>
+            <div class="video-info">
+              <div class="channel-icon">
+                <img src="assets/icons/channels_SMTO.jpg" alt="Channel Icon" />
+              </div>
+              <div class="video-details">
+                <h3 class="video-title">[playlist] 국락 갈래말래갈래말래</h3>
+                <p class="channel-name">서울시국악관현악단</p>
+                <p class="video-metadata">조회수 4.7만회 · 1일 전</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 영상 카드 7 -->
+          <div class="video-card">
+            <div class="thumbnail-container">
+              <img
+                class="thumbnail"
+                src="assets/images/thumbnail_slom.jpg"
+                alt="Thumbnail"
+              />
+              <span class="video-duration">1:00:00</span>
+            </div>
+            <div class="video-info">
+              <div class="channel-icon">
+                <img src="assets/icons/channels_slom.jpg" alt="Channel Icon" />
+              </div>
+              <div class="video-details">
+                <h3 class="video-title">슬롬서울도심1시간걷기플레이리스트</h3>
+                <p class="channel-name">Slom</p>
+                <p class="video-metadata">조회수 6.3만회 · 4일 전</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 영상 카드 8 -->
+          <div class="video-card" OnClick="location.href ='movie_list/movie04.html'">
+            <div class="thumbnail-container">
+              <img
+                class="thumbnail"
+                src="assets/images/thumbnail_roomwaves.jpg"
+                alt="Thumbnail"
+              />
+              <span class="video-duration">25:40</span>
+            </div>
+            <div class="video-info">
+              <div class="channel-icon">
+                <img
+                  src="assets/icons/channels_roomwaves.jpg"
+                  alt="Channel Icon"
+                />
+              </div>
+              <div class="video-details">
+                <h3 class="video-title">I can fly.</h3>
+                <p class="channel-name">room waves</p>
+                <p class="video-metadata">조회수 9.7천회 · 2주 전</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 영상 카드 9 -->
+          <div class="video-card" OnClick="location.href ='movie_list/movie05.html'">
+            <div class="thumbnail-container">
+              <img
+                class="thumbnail"
+                src="assets/images/thumbnail_hostless.jpg"
+                alt="Thumbnail"
+              />
+              <span class="video-duration">25:40</span>
+            </div>
+            <div class="video-info">
+              <div class="channel-icon">
+                <img
+                  src="assets/icons/channels_hostless.jpg"
+                  alt="Channel Icon"
+                />
+              </div>
+              <div class="video-details">
+                <h3 class="video-title">사랑에 시차가 있다니 | playlist</h3>
+                <p class="channel-name">hostless</p>
+                <p class="video-metadata">조회수 15만회 · 1개월 전</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 영상 카드 10 -->
+          <div class="video-card" OnClick="location.href ='movie_list/movie06.html'">
+            <div class="thumbnail-container">
+              <img
+                class="thumbnail"
+                src="assets/images/thumbnail_zahhousemix.jpg"
+                alt="Thumbnail"
+              />
+              <span class="video-duration">1:05:40</span>
+            </div>
+            <div class="video-info">
+              <div class="channel-icon">
+                <img
+                  src="assets/icons/channels_zahhousemix.jpg"
+                  alt="Channel Icon"
+                />
+              </div>
+              <div class="video-details">
+                <h3 class="video-title">
+                  Minimal House Vinyl mix in a tiny apartment in Japan Vol.5 -
+                  by Itou
+                </h3>
+                <p class="channel-name">zah house mix</p>
+                <p class="video-metadata">조회수 15만회 · 1개월 전</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Shorts 섹션 헤더 -->
+        <div class="shorts-header">
+          <img
+            class="shorts-icon"
+            src="assets/icons/logos/shorts.svg"
+            alt="Shorts Icon"
+          />
+          <h2 class="shorts-title">Shorts</h2>
+        </div>
+
+        <!-- Shorts 그리드 -->
+        <section class="shorts-grid">
+          <!-- Shorts 카드 1 -->
+          <div class="shorts-card">
+            <div class="shorts-thumbnail-container">
+              <img
+                class="shorts-thumbnail"
+                src="assets/images/thumbnail_shorts_jundog.avif"
+                alt="Shorts Thumbnail"
+              />
+              <div class="shorts-views">1.2M views</div>
+            </div>
+            <div class="shorts-info">
+              <h3 class="shorts-video-title">
+                전 부치는거 구경하는 강아지 #shorts
+              </h3>
+            </div>
+          </div>
+
+          <!-- Shorts 카드 2 -->
+          <div class="shorts-card">
+            <div class="shorts-thumbnail-container">
+              <img
+                class="shorts-thumbnail"
+                src="assets/images/thumbnail_chanel.avif"
+                alt="Shorts Thumbnail"
+              />
+              <div class="shorts-views">850K views</div>
+            </div>
+            <div class="shorts-info">
+              <h3 class="shorts-video-title">
+                샤넬 1위 립스틱? 미지근 멀멀 고급버전🤎 90쥬르
+              </h3>
+            </div>
+          </div>
+
+          <!-- Shorts 카드 3 -->
+          <div class="shorts-card">
+            <div class="shorts-thumbnail-container">
+              <img
+                class="shorts-thumbnail"
+                src="assets/images/thumbnail_greenpencil.avif"
+                alt="Shorts Thumbnail"
+              />
+              <div class="shorts-views">2.3M views</div>
+            </div>
+            <div class="shorts-info">
+              <h3 class="shorts-video-title">
+                애초에 어울릴 거라 생각하지 않았슨( •ᴗ•͈)◞ 하지만 예쁘죠
+              </h3>
+            </div>
+          </div>
+
+          <!-- Shorts 카드 4 -->
+          <div class="shorts-card">
+            <div class="shorts-thumbnail-container">
+              <img
+                class="shorts-thumbnail"
+                src="assets/images/thumbnail_shorts_minidog.avif"
+                alt="Shorts Thumbnail"
+              />
+              <div class="shorts-views">1.8M views</div>
+            </div>
+            <div class="shorts-info">
+              <h3 class="shorts-video-title">
+                직장 동료가 회사에 강아지 데리고 옴
+              </h3>
+            </div>
+          </div>
+
+          <!-- Shorts 카드 5 -->
+          <div class="shorts-card">
+            <div class="shorts-thumbnail-container">
+              <img
+                class="shorts-thumbnail"
+                src="assets/images/thumbnail_shorts_aibillboard.avif"
+                alt="Shorts Thumbnail"
+              />
+              <div class="shorts-views">920K views</div>
+            </div>
+            <div class="shorts-info">
+              <h3 class="shorts-video-title">AI로 빌보드 1위 해보기</h3>
+            </div>
+          </div>
+
+          <!-- Shorts 카드 6 -->
+          <div class="shorts-card">
+            <div class="shorts-thumbnail-container">
+              <img
+                class="shorts-thumbnail"
+                src="assets/images/thumbnail_shorts_watercat.avif"
+                alt="Shorts Thumbnail"
+              />
+              <div class="shorts-views">3.1M views</div>
+            </div>
+            <div class="shorts-info">
+              <h3 class="shorts-video-title">
+                3대가 덕을 쌓아야 볼 수 있는 수속성 냥이 ㅋㅋㅋㅋ
+              </h3>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

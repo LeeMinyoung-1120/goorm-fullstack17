@@ -1,0 +1,240 @@
+/* 헤더 공통 */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  z-index: 1000;
+  height: 56px;
+  padding: 0 16px;
+  background: #fff;
+}
+.left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+}
+.logo-img {
+  height: auto;
+  width: 120px;
+  object-fit: contain;
+  background: none;
+  margin: 0px 0px 0px -5px;
+}
+.logo-kr {
+  font-size: 9px;
+  color: #606060;
+  margin: -16px 0px 0px -10px;
+}
+
+/* 아이콘 버튼(햄버거, 알림 등) */
+.icon-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+.icon-btn:hover {
+  background: #e6e6e6;
+}
+
+/* 툴팁 공통 스타일 */
+.with-tip {
+  position: relative;
+}
+.with-tip[data-tip]:hover::after {
+  content: attr(data-tip);
+  position: absolute;
+  bottom: -42px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(60, 60, 60, 0.95);
+  color: #fff;
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  white-space: nowrap;
+  z-index: 1001;
+}
+
+/* 검색 영역(데스크탑/아이패드에서만 보임) */
+.center {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.search-form {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  max-width: 600px;
+  border: 1px solid #e5e5e5;
+  border-radius: 999px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(36, 36, 36, 0.1) inset;
+}
+.search-form input {
+  flex: 1;
+  border: 0;
+  outline: 0;
+  color: #0f0f0f;
+  padding: 10px 12px;
+  padding-right: 42px;
+  background: transparent;
+}
+/* WebKit 기본 검색 */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+  appearance: none;
+  display: none;
+}
+
+/* 포커스(컨테이너) */
+.search-form:focus-within {
+  box-shadow: 0 0 0 1px #2864b1 inset;
+}
+.search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: none;
+  opacity: 0.9;
+}
+.search-form:focus-within .search-icon {
+  display: block;
+}
+/* 포커스 시 입력 왼쪽 패딩 증가(아이콘과 겹치지 않게) */
+.search-form:focus-within input {
+  padding-left: 36px;
+}
+
+/* 내부 IME 아이콘 */
+.ime-keyboard {
+  position: absolute;
+  right: 58px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.9;
+  padding: 4px;
+}
+
+/* 검색 버튼 */
+.search-btn {
+  width: 56px;
+  display: grid;
+  place-items: center;
+  background: #f8f8f8;
+  border-left: 1px solid #e5e5e5;
+}
+.search-btn:hover {
+  background: #e6e6e6;
+}
+
+/* 음성 버튼 */
+.voice-btn {
+  width: 40px;
+  height: 40px;
+  background: #f8f8f8;
+  border-radius: 50%;
+}
+
+.voice-btn:hover {
+  background: #efefef;
+}
+
+/* 우측 액션(데스크탑/아이패드) */
+.right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #ad5eb8;
+  display: grid;
+  place-items: center;
+  font-size: 15px;
+  font-weight: 500;
+  color: #fff;
+  margin-left: 6px;
+}
+
+/* + 만들기 버튼: 모든 해상도 공통 고정 규격 94.64 × 36 */
+.create-btn {
+  width: 94.64px;
+  height: 36px;
+  flex: 0 0 94.64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 999px;
+  background: #f6f6f6;
+  border: 1px solid #f6f6f6;
+  white-space: nowrap;
+}
+.create-btn:hover {
+  background: #efefef;
+  border-color: none;
+}
+.create-btn .material-symbols-outlined {
+  font-size: 20px;
+  line-height: 1;
+}
+.btn-text {
+  font-size: 14px;
+  font-weight: 500;
+  color: #0f0f0f;
+}
+
+/* 모바일 전용(우측 묶음) */
+.mobile-actions {
+  display: none;
+  gap: 8px;
+  align-items: center;
+  margin-left: auto;
+}
+
+/* 반응형 */
+/* 아이패드 구간: 768px ~ 1024px */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .center {
+    display: flex;
+  }
+  .right {
+    display: flex;
+  }
+  .mobile-actions {
+    display: none;
+  }
+}
+/* 모바일 구간: 767px 이하 */
+@media (max-width: 767px) {
+  .center,
+  .right {
+    display: none;
+  }
+  .mobile-actions {
+    display: flex;
+  }
+}
