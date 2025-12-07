@@ -1,0 +1,137 @@
+/* ===== 사이드바 기본 ===== */
+.sidebar {
+  position: sticky;
+  top: 0;
+  height: 100dvh;
+  background: #fff;
+  border-right: 1px solid var(--line);
+  padding: 8px 12px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== 로고 영역 공통 ===== */
+.brand {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+}
+
+.brand img {
+  display: block;
+}
+
+/* 기본: PC에서 풀로고만 보이고 아이콘 숨김 */
+.logo-full {
+  display: block;
+}
+.logo-mini {
+  display: none !important;
+}
+
+/* === PC 전용 (min-width:1261px) === */
+@media (min-width: 1261px) {
+  .brand {
+    justify-content: left;
+    height: 100px;
+    padding: 0 12px;
+    margin: 0;
+    cursor: pointer;
+  }
+
+  /* PC에서는 hover 배경x */
+  .brand:hover {
+    background: none;
+  }
+}
+
+/* === 태블릿 이하 (max-width:1260px) === */
+@media (max-width: 1260px) {
+  /*미니 로고만*/
+  .logo-full {
+    display: none !important;
+  }
+  .logo-mini {
+    display: block !important;
+  }
+
+  /* 미니 로고 버튼 */
+  .brand {
+    justify-content: center;
+    height: 48px;
+    padding: 0;
+    border-radius: 10px;
+    margin: 20px 0;
+    cursor: pointer;
+  }
+
+  /* hover 배경 적용 */
+  .brand:hover {
+    background: var(--hover);
+  }
+}
+
+/* ===== 메뉴 아이템 ===== */
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.item {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  gap: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+}
+
+.item:hover {
+  background: var(--hover);
+}
+
+.ico {
+  font-family: "Material Symbols Outlined";
+  width: 24px;
+  text-align: center;
+  font-size: 24px;
+  line-height: 1;
+  color: #000;
+}
+
+.txt {
+  font-size: 15px;
+}
+
+/* ===== 하단 메뉴 ===== */
+.nav-bottom {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px 0 8px;
+}
+
+.bottom-btn {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 12px;
+  border-radius: 10px;
+  border: 0;
+  background: transparent;
+  font: inherit;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.bottom-btn:hover {
+  background: var(--hover);
+}

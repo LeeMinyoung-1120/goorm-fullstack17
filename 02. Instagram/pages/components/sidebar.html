@@ -1,0 +1,86 @@
+<aside class="sidebar">
+  <div class="brand">
+    <!-- PC용 풀 로고 *현 작업중이라 pc용에 태블릿용 아이콘 함께 뜸 -->
+    <img
+      onclick="goPage('home')"
+      src="../../assets/icon/logo.svg"
+      alt="Instagram"
+      class="logo-full"
+      width="120"
+      height="32"
+    />
+    <!-- 태블릿용 아이콘 -->
+    <img
+      onclick="goPage('home')"
+      src="../../assets/icon/logo2.png"
+      alt="Instagram"
+      class="logo-mini"
+      width="20"
+      height="20"
+    />
+  </div>
+
+  <nav class="nav">
+    <a onclick="goPage('home')" class="item" data-key="home">
+      <span class="ico">home</span><span id="home" class="txt">홈</span>
+    </a>
+
+    <button class="item" id="btn-search" type="button" data-key="search">
+      <span class="ico">search</span><span id="search" class="txt">검색</span>
+    </button>
+
+    <a onclick="goPage('explore')" class="item" data-key="explore">
+      <span class="ico">explore</span><span id="explore" class="txt">탐색 탭</span>
+    </a>
+
+    <a class="item" data-key="reels"
+      ><span class="ico">smart_display</span><span id="reels" class="txt">릴스</span></a
+    >
+    <a onclick="goPage('messenger')" class="item" data-key="messenger"
+      ><span class="ico">chat</span><span id="messenger" class="txt">메시지</span></a
+    >
+    <a class="item" data-key="notify"
+      ><span class="ico">favorite</span><span id="notify" class="txt">알림</span></a
+    >
+    <a class="item" data-key="create"
+      ><span class="ico">add_box</span><span id="create" class="txt">만들기</span></a
+    >
+    <a onclick="goPage('profile')" class="item" data-key="profile"
+      ><span class="ico">account_circle</span><span id="profile" class="txt">프로필</span></a
+    >
+  </nav>
+
+  <div class="nav-bottom">
+    <div class="submenu" id="submenu">
+      <button class="switch-btn">
+        <span class="txt">계정 전환</span>
+      </button>
+      <button class="logout-btn" onclick="logout();" return false;>
+        <span class="txt">로그아웃</span>
+      </button>
+    </div>
+    <button class="bottom-btn menu item" onclick="subDisplay()">
+      <span class="ico">menu</span><span class="txt">더 보기</span>
+    </button>
+    <button class="bottom-btn item">
+      <span class="ico">apps</span><span class="txt">Meta의 다른 앱</span>
+    </button>
+  </div>
+</aside>
+
+<aside class="mobile-sidebar">
+  <div class="mobile-nav-top">
+    <div class="brand">
+      <img
+        onclick="goPage('home')"
+        src="../../assets/icon/logo.svg"
+        alt="Instagram"
+        width="120"
+        height="32"
+      />
+    </div>
+  </div>
+  <div class="mobile-nav-bottom">
+
+  </div>
+</aside>

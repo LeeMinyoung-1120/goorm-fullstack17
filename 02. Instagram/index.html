@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="refresh" content="0; url=http://localhost/pages/home.html"></meta>
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    if (window.localStorage.getItem('status')) {
+      window.location.href="./pages/home.html";
+    }
+    else {
+      window.location.href="./pages/login.html";
+    }
+  </script>
+</body>
+</html>

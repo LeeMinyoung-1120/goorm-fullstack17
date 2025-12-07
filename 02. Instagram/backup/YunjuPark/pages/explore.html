@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Explore</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:FILL,GRAD@0..1,0"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/base.css" />
+    <link rel="stylesheet" href="../styles/layout.css" />
+    <link rel="stylesheet" href="../styles/sidebar.css" />
+    <link rel="stylesheet" href="../styles/search.css" />
+    <link rel="stylesheet" href="../styles/explore.css" />
+  </head>
+  <body class="app">
+    <div data-include="../components/sidebar.html"></div>
+
+    <main class="main">
+      <div
+        class="container"
+        data-include="../components/explore-grid.html"
+      ></div>
+    </main>
+
+    <div data-include="../components/search-panel.html"></div>
+
+    <script src="../script/include.js"></script>
+    <script src="../script/search.js"></script>
+  </body>
+</html>

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Instagram Login</title>
+
+  <!-- Billabong 폰트 -->
+  <link href="https://fonts.cdnfonts.com/css/billabong" rel="stylesheet">
+
+  <!-- CSS 연결 -->
+  <link rel="stylesheet" href="../styles/login.css" />
+
+</head>
+
+<body>
+  <main class="login-page">
+    <section class="login-container">
+
+      <!-- 로그인 박스 -->
+      <div class="login-box">
+        <h1 class="logo">Instagram</h1>
+
+        <form class="login-form">
+          <input id="user-id"
+            type="text"
+            placeholder="전화번호, 사용자 이름 또는 이메일"
+            class="input-field"
+          />
+          <input id="user-pw"
+            type="password"
+            placeholder="비밀번호"
+            class="input-field"
+          />
+
+          <button tyle="button" class="login-btn" onClick="saveLocalStorage(); return false;">로그인</button>
+
+          <div class="divider-container">
+            <div class="divider"></div>
+            <div class="divider-text">또는</div>
+            <div class="divider"></div>
+          </div>
+
+          <button class="fb-login-btn">
+            <i class="fab fa-facebook-square"></i>
+            Facebook으로 로그인
+          </button>
+
+          <a href="#" class="pw-reset">비밀번호를 잊으셨나요?</a>
+        </form>
+      </div>
+
+      <!-- 가입 안내 박스 -->
+      <div class="signup-box">
+        계정이 없으신가요? <a href="#">가입하기</a>
+      </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <ul>
+        <li><a href="#">소개</a></li>
+        <li><a href="#">도움말</a></li>
+        <li><a href="#">홍보 센터</a></li>
+        <li><a href="#">API</a></li>
+        <li><a href="#">채용 정보</a></li>
+      </ul>
+      <p class="copyright">© 2025 Instagram from Meta</p>
+    </footer>
+  </main>
+  <script src="../scripts/login.js"></script>
+</body>
+</html>

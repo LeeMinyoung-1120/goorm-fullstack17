@@ -1,0 +1,102 @@
+#logo_div {
+    padding-top: 30px;
+    padding-left: 20px;
+    width: 15%;
+    align-items: center;
+    border-right-style: solid;
+    border-right-color: #dbdbdb;
+    border-right-width: 0.1vw;
+    display: block;
+    position: fixed;
+    height: 100%;
+}
+
+.pc_ver {
+    display: block;
+}
+
+.mobile_ver {
+    display: none;
+    width: 25px;
+    height: 25px;
+}
+
+.side-menu-top {
+    padding-top: 25px;
+    font-size: 16px;
+    font-style: normal;
+}
+
+.side-menu-bottom {
+    font-size: 16px;
+    font-style: normal;
+}
+
+.side-menu-top div {
+    padding-top: 10px;
+    padding-left: 5px;
+    padding-bottom: 10px;
+    margin-bottom: 5px;
+}
+
+.side-menu-bottom div {
+    padding-top: 10px;
+    padding-left: 5px;
+    padding-bottom: 10px;
+    margin-bottom: 5px;
+}
+
+.side-menu-top div:hover,
+.side-menu-bottom div:hover {
+    border-radius: 5px;
+    width: 14vw;
+    background-color: #efefef;
+}
+
+.side-menu-top a,
+.side-menu-bottom a {
+    color: black;
+    text-decoration: none;
+}
+
+.side-menu-top img,
+.side-menu-bottom img {
+    width: 25px;
+    height: 25px;
+}
+
+.side-menu-top span,
+.side-menu-bottom span {
+    margin-left: 15px;
+}
+
+.side-menu-top img, span {
+    vertical-align: middle;
+}
+
+.side-menu-bottom img, span {
+    vertical-align: middle;
+}
+
+.side-menu-top {
+    margin-bottom: 100px;
+}
+
+@media only screen and (min-width : 767px) and (max-width: 1024px) {
+    #logo_div {
+        width: 5%;
+    }
+
+    .pc_ver {
+        display: none;
+    }
+
+    .mobile_ver {
+        display: block;
+    }
+
+    .side-menu-top span,
+    .side-menu-bottom span {
+        display: none;
+    }
+}

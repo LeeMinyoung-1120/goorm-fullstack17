@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Messenger</title>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:FILL,GRAD@0..1,0" rel="stylesheet"/>
+  <link rel="stylesheet" href="../styles/messenger/general.css" />
+  <link rel="stylesheet" href="../styles/messenger/messenger.css" />
+  <link rel="stylesheet" href="../styles/sidebar.css" />
+  <link rel="stylesheet" href="../styles/search.css" />
+  <link rel="stylesheet" href="../styles/layout.css" />
+  <link rel="stylesheet" href="../styles/base.css" />
+
+</head>
+<body class>
+  <div class="messenger-container">
+    <div data-include="./components/sidebar.html"></div>
+    <section>
+      <div class="left-section" id="left-section">
+      <div class="left-section-header">
+        <div class="header-icons-left">
+          <h3>hajang</h3>
+          <img src="../assets/icon/arrow-down-icon.png">
+        </div>
+        <div class="header-icons-right">
+          <img src="../assets/icon/edit-icon.png">
+        </div>
+      </div>
+      <div class="left-section-search">
+        <img id="left-section-search-back" src="../assets/icon/arrow-left-icon.png">
+        <input id="left-section-input" placeholder="검색">
+      </div>
+  
+      <div class="left-section-memo">
+        <img src="../assets/images/avatar.png">
+        <p>내 메모</p>
+      </div>
+
+      <div class="left-section-message">
+        <div class="left-section-message-text">
+          <h3>메시지</h3>
+          <p class="text-grey">요청</p>
+        </div>
+    
+        <div class="left-section-message-container">
+          <img src="../assets/images/avatar.png">
+          <div class="left-section-message-info">
+            <p>hajang</p>
+            <p class="text-grey">나 : hi &#183; 1분</p>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <div class="right-section" id="right-section">
+        <div class="right-section-profile">
+          <img id="back" src="../assets/icon/arrow-left-icon.png">
+          <img src="../assets/images/avatar.png">
+          <h3>hajang님</h3>
+        </div>
+        <div id="chat-container">
+          <div class="chat-container-info">
+            <img src="../assets/images/avatar.png">
+            <h3>hajang</h3>
+            <button>프로필 보기</button>
+            <p>202.10.10 오전 5:55</p>
+          </div>
+        </div>
+        <div class="input-wrapper">
+          <input type="text" id="msg-input" placeholder="메시지를 입력하세요.">
+          <!-- 왼쪽 아이콘 -->
+          <div class="input-left-icons">
+            <img src="../assets/icon/smile-icon.png" class="icon">
+          </div>
+          <!-- 오른쪽 아이콘 & send 버튼 -->
+          <div class="input-right-icons">
+            <img src="../assets/icon/mic-icon.png" class="icon">
+            <img src="../assets/icon/gallery-icon.png" class="icon">
+            <img src="../assets/icon/sticker-icon.png" class="icon">
+            <button id="send-btn">Send</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div data-include="./components/search-panel.html"></div>
+<script src="../scripts/include.js"></script>
+<script src="../scripts/messenger.js"></script>
+<script src="../scripts/search.js"></script>
+</body>
+</html>

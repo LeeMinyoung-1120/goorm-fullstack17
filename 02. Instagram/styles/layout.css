@@ -1,0 +1,38 @@
+/* 좌측 고정 사이드바 + 콘텐츠 */
+.app {
+  min-height: 100dvh;
+  display: grid;
+  grid-template-columns: var(--sb-w) 1fr;
+}
+.main {
+  min-width: 0;
+  display: flex;
+  justify-content: center;
+}
+.container {
+  width: 100%;
+  max-width: var(--grid-max);
+  padding: 24px;
+}
+
+/* 반응형  */
+@media (max-width: 1260px) {
+  :root {
+    --sb-w: 73px;
+  }
+  .sidebar .txt {
+    display: none;
+  }
+  .sidebar .item {
+    justify-content: center;
+    gap: 0;
+    padding: 0;
+  }
+}
+
+/* 모바일 여백 */
+@media (max-width: 620px) {
+  .container {
+    padding: 16px;
+  }
+}
